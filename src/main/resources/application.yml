@@ -1,0 +1,5 @@
+spring:
+  jpa:
+    # open-in-view 指数据库查询会贯穿整个视图渲染，直到渲染完成才会关闭 session 释放数据库连接。
+    # 如果说同一次请求多次查询数据库时只有第一次会访问数据库之后都会直接获取 session 中都数据，就可能在并发时使 @Transactional 失效。默认开启。
+    open-in-view: false
