@@ -9,9 +9,9 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import javax.sql.DataSource;
 
 /**
- * 数据库测试配置类
- * <p>
- * 通过 testcontainers 依赖实现在测试环境 使用 docker 去创建一个数据库用于测试。
+ * 数据库测试配置类。
+ *
+ * <p>通过 testcontainers 依赖实现在测试环境使用 docker 去创建一个数据库用于测试。
  *
  * @author KanouAkira
  * @date 2022/3/27 13:59
@@ -25,11 +25,11 @@ public class DatabaseTestConfiguration {
 
     @Bean
     @FlywayDataSource
-    public DataSource dataSource(PostgreSQLContainer<?> postgreSQLContainer) {
+    public DataSource dataSource(PostgreSQLContainer<?> postgreSqlContainer) {
         HikariConfig hikariConfig = new HikariConfig();
-        hikariConfig.setJdbcUrl(postgreSQLContainer.getJdbcUrl());
-        hikariConfig.setUsername(postgreSQLContainer.getUsername());
-        hikariConfig.setPassword(postgreSQLContainer.getPassword());
+        hikariConfig.setJdbcUrl(postgreSqlContainer.getJdbcUrl());
+        hikariConfig.setUsername(postgreSqlContainer.getUsername());
+        hikariConfig.setPassword(postgreSqlContainer.getPassword());
         return new HikariDataSource(hikariConfig);
     }
 

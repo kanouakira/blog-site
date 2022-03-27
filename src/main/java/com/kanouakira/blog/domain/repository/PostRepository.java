@@ -4,6 +4,8 @@ import com.kanouakira.blog.domain.model.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
+ * 帖文 jpa 持久层接口。
+ *
  * @author KanouAkira
  * @date 2022/3/27 11:06
  */

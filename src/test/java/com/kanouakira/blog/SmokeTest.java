@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
- * SmokeTest 冒烟测试，验证程序是否正常启动
+ * SmokeTest 冒烟测试，验证程序是否正常启动。
  *
  * @author KanouAkira
  * @date 2022/3/26 10:05
