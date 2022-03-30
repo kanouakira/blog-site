@@ -1,4 +1,4 @@
-package com.kanouakira.blog.domain.model.entity.vo;
+package com.kanouakira.blog.domain.model.vo;
 
 import org.springframework.data.annotation.PersistenceConstructor;
 
@@ -59,13 +59,13 @@ public class PostUpdatedRecord {
      * @return 创建记录
      */
     public static PostUpdatedRecord ofCreated(String updaterId, String createdTitle, String createdContent) {
-        return new PostUpdatedRecord(UpdatedType.CREATED, 
-                updaterId, OffsetDateTime.now(), 
-                null, 
-                createdTitle, 
-                createdContent, 
-                null, 
-                null, 
+        return new PostUpdatedRecord(UpdatedType.CREATED,
+                updaterId, OffsetDateTime.now(),
+                null,
+                createdTitle,
+                createdContent,
+                null,
+                null,
                 null,
                 null);
     }
@@ -81,13 +81,13 @@ public class PostUpdatedRecord {
      */
     public static PostUpdatedRecord ofTitleEdited(String updaterId, String reason, String editedTitle, String unEditedTitle) {
         return new PostUpdatedRecord(UpdatedType.TITLE_EDITED,
-                updaterId, 
+                updaterId,
                 OffsetDateTime.now(),
-                reason, 
-                null, 
-                null, 
-                editedTitle, 
-                unEditedTitle, 
+                reason,
+                null,
+                null,
+                editedTitle,
+                unEditedTitle,
                 null,
                 null);
     }
@@ -103,13 +103,13 @@ public class PostUpdatedRecord {
      */
     public static PostUpdatedRecord ofContentEdited(String updaterId, String reason, String editedContent, String unEditedContent) {
         return new PostUpdatedRecord(UpdatedType.CONTENT_EDITED,
-                updaterId, 
+                updaterId,
                 OffsetDateTime.now(),
-                reason, 
-                null, 
-                null, 
-                null, 
-                null, 
+                reason,
+                null,
+                null,
+                null,
+                null,
                 editedContent,
                 unEditedContent);
     }
@@ -142,15 +142,15 @@ public class PostUpdatedRecord {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PostUpdatedRecord that = (PostUpdatedRecord) o;
-        return updatedType == that.updatedType 
-                && Objects.equals(updaterId, that.updaterId) 
-                && Objects.equals(updatedAt, that.updatedAt) 
-                && Objects.equals(reason, that.reason) 
-                && Objects.equals(createdTitle, that.createdTitle) 
-                && Objects.equals(createdContent, that.createdContent) 
-                && Objects.equals(editedTitle, that.editedTitle) 
-                && Objects.equals(unEditedTitle, that.unEditedTitle) 
-                && Objects.equals(editedContent, that.editedContent) 
+        return updatedType == that.updatedType
+                && Objects.equals(updaterId, that.updaterId)
+                && Objects.equals(updatedAt, that.updatedAt)
+                && Objects.equals(reason, that.reason)
+                && Objects.equals(createdTitle, that.createdTitle)
+                && Objects.equals(createdContent, that.createdContent)
+                && Objects.equals(editedTitle, that.editedTitle)
+                && Objects.equals(unEditedTitle, that.unEditedTitle)
+                && Objects.equals(editedContent, that.editedContent)
                 && Objects.equals(unEditedContent, that.unEditedContent);
     }
 

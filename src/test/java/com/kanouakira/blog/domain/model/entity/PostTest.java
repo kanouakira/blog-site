@@ -1,11 +1,11 @@
 package com.kanouakira.blog.domain.model.entity;
 
-import com.kanouakira.blog.domain.model.entity.vo.PostUpdatedRecord;
+import com.kanouakira.blog.domain.model.vo.PostUpdatedRecord;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static com.kanouakira.blog.domain.model.entity.vo.PostUpdatedRecord.UpdatedType.CREATED;
+import static com.kanouakira.blog.domain.model.vo.PostUpdatedRecord.UpdatedType.CREATED;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;

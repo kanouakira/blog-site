@@ -1,6 +1,6 @@
 package com.kanouakira.blog.domain.model.entity;
 
-import com.kanouakira.blog.domain.model.entity.vo.PostUpdatedRecord;
+import com.kanouakira.blog.domain.model.vo.PostUpdatedRecord;
 import org.springframework.data.annotation.PersistenceConstructor;
 
 import javax.persistence.CollectionTable;
