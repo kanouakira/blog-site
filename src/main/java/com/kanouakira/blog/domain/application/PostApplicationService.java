@@ -2,7 +2,7 @@ package com.kanouakira.blog.domain.application;
 
 import com.kanouakira.blog.domain.application.command.CreatePostCommand;
 import com.kanouakira.blog.domain.application.result.PostCreatedResult;
-import com.kanouakira.blog.domain.model.Post;
+import com.kanouakira.blog.domain.model.entity.Post;
 import com.kanouakira.blog.domain.repository.PostRepository;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.kanouakira.blog.domain.repository;
 
-import com.kanouakira.blog.domain.model.Post;
+import com.kanouakira.blog.domain.model.entity.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
