@@ -30,8 +30,8 @@ public class Post {
     // 主键
     private String id;
 
-    // 帖文作者
-    private String author;
+    // 帖文作者 id
+    private String authorId;
 
     // 帖文标题
     private String title;
@@ -51,12 +51,12 @@ public class Post {
     }
 
     /* 声明构造函数，无需id */
-    public Post(String author, String title, String content) {
-        this.author = author;
+    public Post(String authorId, String title, String content) {
+        this.authorId = authorId;
         this.title = title;
         this.content = content;
         this.updatedRecords = new ArrayList<>();
-        updatedRecords.add(PostUpdatedRecord.ofCreated(author, title, content));
+        updatedRecords.add(PostUpdatedRecord.ofCreated(authorId, title, content));
     }
 
     public void editTitle(String editorId, String reason, String title) {
@@ -82,12 +82,12 @@ public class Post {
         this.id = id;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthorId(String author) {
+        this.authorId = author;
     }
 
     public String getTitle() {

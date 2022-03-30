@@ -50,7 +50,7 @@ class PostRepositoryTest {
     }
 
     private void assertPostEqual(Post actualPost, Post expectPost) {
-        assertThat(actualPost.getAuthor(), equalTo(expectPost.getAuthor()));
+        assertThat(actualPost.getAuthorId(), equalTo(expectPost.getAuthorId()));
         assertThat(actualPost.getTitle(), equalTo(expectPost.getTitle()));
         assertThat(actualPost.getContent(), equalTo(expectPost.getContent()));
         assertThat(actualPost.getUpdatedRecords(), hasSize(expectPost.getUpdatedRecords().size()));
